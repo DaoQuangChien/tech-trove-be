@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_rows",
+  "info": {
+    "displayName": "TableRow",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "cells": {
+      "type": "json",
+      "required": true
+    }
+  },
+  "config": {}
+}

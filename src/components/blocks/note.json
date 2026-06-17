@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_notes",
+  "info": {
+    "displayName": "Note",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "default": "info",
+      "enum": [
+        "info",
+        "success",
+        "warning",
+        "danger"
+      ]
+    }
+  },
+  "config": {}
+}

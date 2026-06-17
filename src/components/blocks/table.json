@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "component",
+      "component": "shared.row",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -16,21 +16,25 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.25.0",
-    "@strapi/plugin-users-permissions": "5.25.0",
-    "@strapi/strapi": "5.25.0",
-    "better-sqlite3": "11.3.0",
-    "fs-extra": "^10.0.0",
-    "mime-types": "^2.1.27",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "@notum-cz/strapi-plugin-tiptap-editor": "^1.2.4",
+    "@strapi/plugin-cloud": "^5.33.0",
+    "@strapi/plugin-users-permissions": "^5.33.0",
+    "@strapi/strapi": "^5.33.0",
+    "@tiptap/core": "^3.26.1",
+    "@tiptap/pm": "^3.26.1",
+    "better-sqlite3": "^11.10.0",
+    "cheerio": "^1.2.0",
+    "fs-extra": "^11.3.5",
+    "mime-types": "^2.1.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4",
+    "styled-components": "^6.4.2"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^22.19.21",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "typescript": "^5"
   },
   "engines": {

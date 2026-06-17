@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_best_sellers",
+  "info": {
+    "displayName": "BestSeller",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "limit": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

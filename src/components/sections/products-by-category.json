@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_products_by_categories",
+  "info": {
+    "displayName": "ProductsByCategory",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "limit": {
+      "type": "integer",
+      "default": 5
+    }
+  },
+  "config": {}
+}
