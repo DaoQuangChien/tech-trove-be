@@ -19,7 +19,9 @@ export default ({ env }) => ({
         },
       },
       actionOptions: {
-        upload: {},
+        upload: {
+          CacheControl: "public, max-age=31536000, immutable",
+        },
         uploadStream: {},
         delete: {},
       },
