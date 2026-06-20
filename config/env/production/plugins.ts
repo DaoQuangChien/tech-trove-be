@@ -22,7 +22,9 @@ export default ({ env }) => ({
         upload: {
           CacheControl: "public, max-age=31536000, immutable",
         },
-        uploadStream: {},
+        uploadStream: {
+          CacheControl: "public, max-age=31536000, immutable",
+        },
         delete: {},
       },
     },
