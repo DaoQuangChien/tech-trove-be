@@ -37,6 +37,13 @@ export function setupPasteInterceptor(): void {
       const editorEl = (e.target as Element | null)?.closest?.('.ProseMirror');
       if (!editorEl || !e.clipboardData) return;
 
+      // Stable ancestor that survives Tiptap re-mounting the `.ProseMirror`
+      // element into a fresh wrapper (see editor.ts swapImageUrls for why).
+      // Strapi's field wrapper carries `id="<fieldName>"`; fall back to a
+      // generic ancestor walk if that's ever not the case.
+      const fieldScope =
+        editorEl.closest('[id]:not(.ProseMirror)') ?? editorEl.parentElement ?? editorEl;
+
       const html = e.clipboardData.getData('text/html');
       const imageFiles = Array.from(e.clipboardData.files).filter((f) =>
         f.type.startsWith('image/'),
@@ -95,8 +102,10 @@ export function setupPasteInterceptor(): void {
         }
         const { urlMap = {} } = await res.json();
 
-        // 3. Swap external URLs for Strapi-hosted ones
-        swapImageUrls(editorEl, urlMap);
+        // 3. Swap external URLs for Strapi-hosted ones. Use `fieldScope`
+        //    (not `editorEl`) so we re-locate the live `.ProseMirror` node
+        //    even if it was re-mounted while we awaited the upload above.
+        swapImageUrls(fieldScope, urlMap);
       } catch (err) {
         console.error('[PasteHandler] Background upload failed:', err);
       } finally {
